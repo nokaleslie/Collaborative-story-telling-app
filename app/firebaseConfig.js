@@ -1,19 +1,21 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, onSnapshot } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_CONFIG",
-  authDomain: "YOUR_FIREBASE_CONFIG",
-  projectId: "YOUR_FIREBASE_CONFIG",
-  storageBucket: "YOUR_FIREBASE_CONFIG",
-  messagingSenderId: "YOUR_FIREBASE_CONFIG",
-  appId: "YOUR_FIREBASE_CONFIG",
+  apiKey: "AIzaSyD6mMrVBysuceRK0fBNFgEckN9L-39J7t8",
+  authDomain: "collaborative-storytelling-app.firebaseapp.com",
+  projectId: "collaborative-storytelling-app",
+  storageBucket: "collaborative-storytelling-app.firebasestorage.app",
+  messagingSenderId: "469749173479",
+  appId: "1:469749173479:web:8677935d6f577e24d9e642",
+  measurementId: "G-0HH2N4RF0D"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
-export const db = getFirestore(app);
-export { collection, addDoc, getDocs, doc, updateDoc, onSnapshot };
-
+const analytics = getAnalytics(app);
